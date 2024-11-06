@@ -41,16 +41,16 @@ function Lista(){
         <div className='to-do-list'>
             <h1>Lista de Tarefas</h1>
             <div>
-                <input type="text" placeholder='Digite a tarefa' value={newTask} onChange={handleInputChange} />
-                <button className='add-button' onClick={addTask}>Adicionar</button>
+                <input type="text" placeholder='Digite sua tarefa' value={newTask} onChange={handleInputChange} />
+                <button className='add-button button' onClick={addTask}>Adicionar</button>
             </div>
             <ol>
                 {tasks.map((task, index) => 
                     <li key={index}>
                         <span className='text'>{task}</span>
-                        <button className='delete-button' onClick={() =>  deleteTask(index)}>Delete</button>
-                        <button className='move-button' onClick={() =>  moveTaskUp(index)}>Up</button>
-                        <button className='move-button' onClick={() =>  moveTaskDown(index)}>Down</button>
+                        <button className='delete-button button' onClick={() =>  deleteTask(index)}>Delete</button>
+                        <button className='move-button button' onClick={() =>  moveTaskUp(index)}>{/* Up */}☝️</button> 
+                        <button className='move-button button' onClick={() =>  moveTaskDown(index)}>{/* Down */}👇</button>
                     </li> 
                 )}
             </ol>
